@@ -1,6 +1,10 @@
-﻿  Vehicle.cpp
+﻿  main.cpp
 d:\visual studio 2015 projects\flocking\flocking\vectorhelper.h(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\visual studio 2015 projects\flocking\flocking\vehicle.cpp(40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  VehicleSystem.cpp
+d:\visual studio 2015 projects\flocking\flocking\vectorhelper.h(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\visual studio 2015 projects\flocking\flocking\vehiclesystem.cpp(8): warning C4305: '=': truncation from 'double' to 'float'
+d:\visual studio 2015 projects\flocking\flocking\vehiclesystem.cpp(9): warning C4305: '=': truncation from 'double' to 'float'
+  Generating Code...
      Creating library d:\visual studio 2015 Projects\Flocking\Debug\Flocking.lib and object d:\visual studio 2015 Projects\Flocking\Debug\Flocking.exp
 sfml-main-d.lib(MainWin32.cpp.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'sfml-main-d.lib(MainWin32.cpp.obj)' or at 'd:\visual studio 2015 Projects\Flocking\Debug\vc140.pdb'; linking object as if no debug info
   Flocking.vcxproj -> d:\visual studio 2015 Projects\Flocking\Debug\Flocking.exe

@@ -1,6 +1,6 @@
 #include "Vehicle.h"
 #include "MyVector.h"
-#include "VectorHelper.h"
+
 void Vehicle::setLocation(Vector2f loc)
 {
 	location = loc;
@@ -12,7 +12,7 @@ Vehicle::Vehicle(Vector2f loc)
 	acceleration = Vector2f(0.f, 0.f);
 	velocity = Vector2f(0.f, 0.f);
 
-	r = 2;
+	r = 7;
 	maxSpeed = 100;
 	maxForce = 0.1f;
 
@@ -32,7 +32,7 @@ void Vehicle::update(float dt)
 //	orientation =  (triangle->getPoint(1) + triangle->getPoint(0)) / 2.f - triangle->getPoint(2);
 	
 	
-	seek(target);
+//	seek(target);
 	velocity += acceleration;
 	velocity = limit(velocity ,maxSpeed);
 	location += velocity*dt;
@@ -67,15 +67,14 @@ void Vehicle::calculate_steer()
 {
 	steer = desired - velocity;
 }
-
-void Vehicle::separate(std::vector<Vehicle*> veh)
+/*
+void Vehicle::separate(std::vector<Vehicle*> veh, float s_w)
 {
 
 	float desiredseparation = veh[0]->r * 2;
 	Vector2f sum = Vector2f(0.f, 0.f);
 	int count = 0;
 	for (Vehicle* other : veh) {
-		//float d = PVector.dist(location, other.location);
 		float d = getDistance(location, other->location);
 		if ((d > 0) && (d < desiredseparation)) {
 			Vector2f diff = location - other->location;
@@ -91,8 +90,10 @@ void Vehicle::separate(std::vector<Vehicle*> veh)
 		sum *= maxSpeed;
 		Vector2f steer = sum -velocity;
 		limit(steer,maxForce);
-		applyForce(steer);
+		
+		applyForce(steer* s_w) ;
 	}
 	
-
+	
 }
+*/

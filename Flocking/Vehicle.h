@@ -5,15 +5,15 @@
 #include <SFML/System.hpp>
 #include <SFML/OpenGL.hpp>
 #include <SFML/Main.hpp>
-
+#include "VectorHelper.h"
 using namespace sf;
 #pragma once
 class Vehicle {
 
 private:
 	
+	int number;
 	
-	Vector2f velocity;
 	Vector2f acceleration;
 	
 	Vector2f steer;
@@ -25,7 +25,7 @@ private:
 	
 public:
 	Vector2f location;
-
+	Vector2f velocity;
 	Vector2f target;
 	sf::ConvexShape* triangle;
 	
@@ -35,11 +35,11 @@ public:
 	void update(float dt);
 	void render(sf::RenderWindow* window);
 	
-	void Vehicle::applyForce(Vector2f force);
+	void applyForce(Vector2f force);
 	void seek(Vector2f target);
 	void calculate_steer();
 
-	void separate(std::vector<Vehicle*> veh);
+//	void separate(std::vector<Vehicle*> veh, float s_w);
 	
 };
 
